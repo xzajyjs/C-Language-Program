@@ -1,8 +1,9 @@
 //Name:多功能工具箱（自定义函数综合练习）
-//Version:alpha 0.32
+//Version:beta 0.32
 //Program-language: C_language
 //Tool : Visual Studio Code
 //Author : xzajyjs 
+//GitHub Repositories:https://github.com/xzajyjs/ToolBox
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
@@ -132,7 +133,7 @@ int main()
                     int b;
                     clear();
                     printf("请输入底数：");
-                    scanf("%lf",&a);
+                    scanf("%lf",&a); 
                     printf("\n请输入幂指数：");
                     scanf("%d",&b);
                     if(a == b) printf("\n0的0次幂不存在，输入错误\n");
@@ -209,7 +210,6 @@ int main()
                     break;
             }
         }
-        //待开发（主目录）
         case 4:{                    //解方程
             if(realbreak_flag == 1)break;
             clear();
@@ -223,10 +223,19 @@ int main()
                 realbreak_flag = 1;
                 break;
             case 2:
+                clear();
+                T_O();
                 realbreak_flag = 1;
                 break;
             case 3:
+                
                 realbreak_flag = 1;
+                break;
+            default:
+                printf("输入错误,即将返回主菜单\n");
+                Sleep(1000);
+                realbreak_flag = 1;
+                break;
             }
         }
     }
@@ -314,6 +323,7 @@ void O_O(){
 void T_O(){
     clear();
     double A1,B1,A2,B2;
+    printf("尚未制作完成，敬请期待~\n");
     
 }
 double calcVolum_circle(double r){
