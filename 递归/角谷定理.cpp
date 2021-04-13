@@ -6,9 +6,13 @@
 using namespace std;
 int flag = 0;
 int f(int n){
+  //退出函数
   if(n == 1)return flag;
   if(n%2==0){
     flag++;
+    //注意：这里return f(n/2)要与res = n + sum(n-1)区分
+    //前者没有了“归”的过程，直接跳出该函数，即没有入栈
+    //而后者则是将sum(n)入栈然后逐步退化n为n-1…………
     return f(n/2);
   }
   else{
